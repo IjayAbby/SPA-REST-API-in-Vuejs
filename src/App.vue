@@ -1,11 +1,27 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <HelloWorld msg="Vite + Vue" />
+  <div id="app">
+    <header>
+      <!-- Header content -->
+    </header>
+    <main>
+      <router-view />
+    </main>
+    <footer>
+      <!-- Footer content -->
+    </footer>
+  </div>
 </template>
 
-<style scoped>
+<script>
+export default {
+  name: 'App',
+}
+</script>
 
+<style>
+#app {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
 </style>
