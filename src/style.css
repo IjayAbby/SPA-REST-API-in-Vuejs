@@ -13,7 +13,7 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-
+/* 
 a {
   font-weight: 500;
   color: #646cff;
@@ -86,4 +86,57 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+} */
+
+/* Global styles */
+body {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header styles */
+header {
+  background-color: #007bff;
+  padding: 10px;
+  color: #fff;
+}
+
+/* Footer styles */
+footer {
+  background-color: #f8f8f8;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+}
+
+/* DogList component styles */
+.card-columns {
+  column-count: 4;
+}
+
+.card {
+  margin-bottom: 20px;
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+}
+
+/* DogDetail component styles */
+h2 {
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
 }
