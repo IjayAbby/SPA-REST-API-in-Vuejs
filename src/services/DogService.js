@@ -3,6 +3,14 @@ import axios from 'axios';
 const BASE_URL = 'https://dog.ceo/api';
 
 export default {
+    async getDogImages(){
+        try {
+            const response = await axios.get(`${BASE_URL}/breeds/image/random/100`);
+            return response
+        }catch(error){
+            console.error('Error fetching dog images:', error);
+        }
+    },
     async getBreeds() {
         try {
             const response = await axios.get(`${BASE_URL}/breeds/list/all`);
@@ -35,4 +43,6 @@ export default {
         }
     }
 };
+
+
 
