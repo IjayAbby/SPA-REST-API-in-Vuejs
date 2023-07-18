@@ -2,10 +2,6 @@
   <div class="container my-4">
     <div class="row">
       <div class="col-12">
-        <h2>{{ dogDetails.name }}</h2>
-        <p><strong>Breed:</strong> {{ dogDetails.breed }}</p>
-        <p><strong>Size:</strong> {{ dogDetails.size }}</p>
-        <p><strong>Temperament:</strong> {{ dogDetails.temperament }}</p>
       </div>
       <div class="col-12">
         <FilterButtons @apply-filter="applyFilter" />
@@ -39,10 +35,10 @@ export default {
       // using Cloudinary or a similar service
     }
   },
-  created() {
-    const breed = this.$route.params.breed
-    this.$store.dispatch('fetchDogDetails', breed)
-  }
+  // created() {
+  //   const breed = this.$route.params.breed
+  //   this.$store.dispatch('fetchDogDetails', breed)
+  // }
 }
 </script>
 
