@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import DogList from '../components/DogList.vue'
 import DogDetail from '../components/DogDetail.vue'
+import DogImage from '../components/DogImage.vue'
 
 
 const routes = [
@@ -12,7 +13,14 @@ const routes = [
     {
         path: '/dog/:breed',
         name: 'DogDetail',
-        component: DogDetail
+        component: DogDetail,
+        props: true
+    },
+    {
+        path: '/image/:image',
+        name: 'DogImage',
+        component: DogImage,
+        props: route => ({ image: route.params.image})
     }
 ]
 

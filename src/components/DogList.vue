@@ -9,10 +9,10 @@
       </div>
       <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3 my-10 lg:my-20">
         <div class="images" v-for="(image,index) in images" :key="index">
-          <router-link to="/dog/1">
-            <img v-lazy="{ src: image, loading: loadingImage, error: loadingImage }" :src="image"
-              class="md:h-72 w-full object-cover" alt="Dog">
-          </router-link>
+            <router-link :to="`/image/${encodeURIComponent(image)}`">
+          <img v-lazy="{ src: image, loading: loadingImage, error: loadingImage }" :src="image"
+            class="md:h-72 w-full object-cover" alt="Dog">
+        </router-link>
         </div>
       </div>
     </div>
@@ -38,9 +38,7 @@
       } catch (e) {
         console.log("There was a problem fetching the breed list.")
       }
-      for (let i = 0; i < 100; i++) {
-        await this.loadRandomImage()
-      }
+      await this.loadRandomImages(100)
     },
     methods: {
       async loadByBreed() {
@@ -49,9 +47,9 @@
           this.images = response.data.message
         }
       },
-      async loadRandomImage() {
-        const response = await axios.get('https://dog.ceo/api/breeds/image/random')
-        this.images.push(response.data.message)
+      async loadRandomImages(count) {
+        const response = await axios.get(`https://dog.ceo/api/breeds/image/random/${count}`)
+        this.images = response.data.message
       }
     },
   };
