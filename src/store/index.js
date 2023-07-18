@@ -1,5 +1,4 @@
 import { createStore } from 'vuex'
-import DogService from '../services/DogService'
 
 const store = createStore({
   state: {
@@ -11,9 +10,9 @@ const store = createStore({
     setDogImages(state, images) {
       state.dogImages = images
     },
-    setDogDetails(state, details) {
-      state.dogDetails = details
-    },
+    // setDogDetails(state, details) {
+    //   state.dogDetails = details
+    // },
     setLoading(state, loading) {
       state.loading = loading
     }
