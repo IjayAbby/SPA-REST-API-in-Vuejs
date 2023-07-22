@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import DogList from '../components/DogList.vue'
-import DogDetail from '../components/DogDetail.vue'
 import DogImage from '../components/DogImage.vue'
 
 
