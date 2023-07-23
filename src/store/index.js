@@ -29,11 +29,11 @@ const store = createStore({
       }
       commit('setLoading', false)
     },
-    async fetchDogDetails({ commit }, breed) {
+    async fetchDogBreed({ commit }, breed) {
       commit('setLoading', true)
       try {
-        const details = await DogList.loadByBreed(breed)
-        commit('setDogDetails', details)
+        const selectedBreed = await DogList.loadByBreed(breed)
+        commit('setDogDetails', selectedBreed)
       } catch (error) {
         console.error('Error fetching dog details:', error)
       }
