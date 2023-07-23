@@ -23,21 +23,6 @@
 <script>
 import axios from 'axios';
 import loadingImage from '../assets/loading.jpg';
-//import { AdvancedImage } from '@cloudinary/vue';
-//import cloudinary from '../services/cloudinary';
-//import { Cloudinary } from "@cloudinary/url-gen";
-
-
-// Create a Cloudinary instance and set your cloud name.
-// const cld = new Cloudinary({
-//   cloud: {
-//     cloudName: "ijayabby",
-//   },
-// });
-
-// Create an instance of the UploadApi class.
-//const uploadApi = new UploadApi(cld);
-
 
 
 export default {
@@ -82,16 +67,10 @@ export default {
           upload_preset: 'my-uploads'
         }
       );
-console.log(uploadResponse)
+      console.log(uploadResponse)
       // Get the public ID of the uploaded image.
       const publicId = uploadResponse.data.secure_url;
       console.log(publicId)
-
-      // Generate a Cloudinary image URL from the public ID.
-      //const cloudinaryImageUrl = cloudinary.v2.url(publicId);
-      //console.log(cloudinaryImageUrl)
-
-      // Add the Cloudinary image URL to the images array.
       this.images.push(publicId);
     }
   },
