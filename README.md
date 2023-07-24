@@ -1,6 +1,16 @@
 # Dog API Project
 
 This project is built with Vue.js and Vite, and uses [Dog API](https://dog.ceo/dog-api/) RESTful API that provides access to images of different dog breeds and sub-breeds. Users can select an image to apply filters to it using Cloudinary's image transformation APIs.
+
+
+## Preview
+
+![Screenshot from 2023-07-24 17-29-56](https://github.com/IjayAbby/SPA-REST-API-in-Vuejs/assets/43843720/eb7fc29b-b45f-42fb-8063-6354bc97402a)
+
+## Live Demo
+
+Check out a live demo of this project [here.](https://quiet-narwhal-49f1da.netlify.app/)
+
 ## Features
 
 - Displays a list of random dog images fetched from the Dog API
@@ -23,8 +33,41 @@ This project is built with Vue.js and Vite, and uses [Dog API](https://dog.ceo/d
 
 ## Contributing
 
-Contributions are welcome! Please open an issue or submit a pull request if you'd like to contribute to this project.
+:handshake: Contributions, issues and feature requests are welcome!
+Start by:
 
-## License
+    1. Forking the project
+    2. Cloning the project to your local machine
+    3. cd into the project directory
+    4. Run git checkout -b your-branch-name
+    5. Make your contributions
+    6. Push your branch up to your forked repository
+    7. Open a Pull Request with a detailed description to the main branch of the original project for a review
 
-This project is licensed under the MIT License.
+Please feel free to contribute to any of these!
+
+Feel free to check the [issues page](https://github.com/IjayAbby/SPA-REST-API-in-Vuejs/issues).
+
+## Author
+
+👤 **Ijay Abby**
+
+- Github: [@IjayAbby](https://github.com/IjayAbby)
+- Twitter: [@Ijay_js](https://twitter.com/Ijay_js)
+- LinkedIn: [Abigael Nyangasi](https://www.linkedin.com/in/ijayabby4/)
+
+# Show your support
+
+Give a :star2: if you like this project! :blush:
+
+## Acknowledgments
+
+- Thanks are owed to the designer, [Chantelle Kyendereta](https://www.behance.net/kyendereta), for design.
+- [Cloudinary](https://cloudinary.com/documentation) for image hosting and transformation.
+- Open source dog pictures provided by [dog-ceo](https://dog.ceo/dog-api/)
+
+# 📝 License
+
+This project is [MIT](https://github.com/IjayAbby/SPA-REST-API-in-Vuejs/blob/main/LICENSE) licensed.
+
+Happy coding!
