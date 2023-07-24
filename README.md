@@ -64,7 +64,7 @@ Give a :star2: if you like this project! :blush:
 
 - Thanks are owed to the designer, [Chantelle Kyendereta](https://www.behance.net/kyendereta), for design.
 - [Cloudinary](https://cloudinary.com/documentation) for image hosting and transformation.
-- Open source dog pictures provided by [dog-ceo](https://dog.ceo/dog-api/)
+- Open source dog pictures provided by [Dog API](https://dog.ceo/dog-api/)
 
 # 📝 License
 
