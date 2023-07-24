@@ -6,8 +6,8 @@
     <main>
       <router-view />
     </main>
-    <footer>
-      <!-- Footer content -->
+    <footer class="text-center">
+      <h5>Made with &#x2764 by IjayAbby. &#xA9 2023 </h5>
     </footer>
   </div>
 </template>
