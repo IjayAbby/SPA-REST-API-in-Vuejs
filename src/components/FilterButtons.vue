@@ -18,7 +18,7 @@
   </template>
 <script>
 
-import DogList from '../components/DogList.vue'
+//import DogList from '../components/DogList.vue'
 import { AdvancedImage } from '@cloudinary/vue';
 import { Cloudinary } from "@cloudinary/url-gen";
 import { sepia, grayscale, cartoonify } from '@cloudinary/url-gen/actions/effect';
@@ -34,12 +34,15 @@ const cld = new Cloudinary({
 
 export default {
   components: {
-    AdvancedImage,
-    DogList
+    AdvancedImage
   },
   data() {
-    const cld = new Cloudinary({ cloud: { cloudName: 'ijayabby' } });
-    const myImage = cld.image(`${publicId}`);
+    // Access the passed image URL via the $route.params.imageUrl property.
+    const imageUrl = this.$route.params.imageUrl;
+    console.log(imageUrl)
+    // Create a Cloudinary image instance using the passed image URL.
+    const myImage = cld.image(imageUrl);
+    
     return {
       myImage,
       filters: ['sepia', 'grayscale', 'cartoonify'],

@@ -10,10 +10,10 @@
       </select>
     </div>
     <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3 my-10 lg:my-20">
-      <div class="images bg-red-100" v-for="(image, index) in images" :key="index">
-        <router-link :to="`/image/${encodeURIComponent(image)}`">
-          <img v-lazy="{ src: image, loading: loadingImage, error: loadingImage }" :src="image"
-            class="md:h-72 w-full object-cover center" alt="Dog">
+      <div class="images bg-red-100" v-for="(publicId) in images" :key="publicId">
+        <router-link :to="{ name: 'FilterButtons', params: { imageUrl: publicId } }">
+          <img v-lazy="{ src: publicId, loading: loadingImage, error: loadingImage }" :src="publicId"
+            class="md:h-72 w-full object-cover center" alt="Dog" @click="handleImageClick(publicId)">
         </router-link>
       </div>
     </div>
@@ -27,7 +27,6 @@ import loadingImage from '../assets/loading.jpg';
 
 export default {
   data() {
-
     return {
       breeds: [],
       selectedBreed: '',
@@ -72,6 +71,9 @@ export default {
       const publicId = uploadResponse.data.secure_url;
       console.log(publicId)
       this.images.push(publicId);
+    },
+    handleImageClick(publicId) {
+      console.log(`Image clicked: ${publicId}`)
     }
   },
 };

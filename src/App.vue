@@ -5,11 +5,13 @@
 
 <script>
 import DogList from './components/DogList.vue'
+//import FilterButtons from './components/FilterButtons.vue';
 
 export default {
   name: 'App',
   components: {
-    DogList
+    DogList,
+    //FilterButtons
   }
 }
 </script>
