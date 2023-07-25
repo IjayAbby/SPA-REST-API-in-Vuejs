@@ -39,7 +39,7 @@ export default {
     } catch (e) {
       console.log("There was a problem fetching the breed list.")
     }
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 100; i++) {
       await this.loadRandomImage()
     }
   },
